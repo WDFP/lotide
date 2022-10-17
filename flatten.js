@@ -1,3 +1,11 @@
+const assertEqual = function (actual, expected) {
+  if (actual === expected) {
+    console.log(`👍👌🔔 Assertion Passed: ${actual} === ${expected}`);
+  } else if (actual !== expected) {
+    console.log(`👎🙀🔕 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
 const eqArrays = function (arrays1, arrays2) {
   // if (arrays1 === arrays2) {
   //   return true;
@@ -24,20 +32,18 @@ const assertArraysEqual = function (array1, array2) {
   }
 };
 
-const without = function (source, itemsToRemove) {
+const flatten = function (array) {
   let newArray = [];
-  for (const item of source) {
-    if (!itemsToRemove.includes(item)) {
+  for (let item of array) {
+    if (Array.isArray(item)) {
+      for (let item2 of item) {
+        newArray.push(item2);
+      }
+    } else {
       newArray.push(item);
     }
   }
   return newArray;
 };
 
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-const test1 = without([1, 2, 3], [1]); // => [2, 3]
-assertArraysEqual(test1, [2, 3]);
-
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-const test2 = without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-assertArraysEqual(test2, ["1", "2"]);
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
