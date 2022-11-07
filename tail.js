@@ -1,9 +1,7 @@
 // FUNCTION IMPLEMENTATION
 
-const assertEqual = require("./assertEqual");
-
 const tail = function(array) {
-  newArray = [];
+  let newArray = [];
   newArray = array.slice(1);
   return newArray;
 };

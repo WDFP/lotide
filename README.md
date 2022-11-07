@@ -31,4 +31,4 @@ The following functions are currently implemented:
 * `function3(const middle = require("./middle");)`: implements middle index of an array
 * `function4(const assertEqual = require("./assertEqual");)`: asserts that 2 arguments are equal
 * `function5(const assertArraysEqual = require("./assertArraysEqual");)`: asserts if 2 arrays are equal
-* `function6(const eqArrays = require("./eqArray");)`: determines if 2 arrays are equal in length and elements
+* `function6(const eqArrays = require("../eqArrays");)`: determines if 2 arrays are equal in length and elements
