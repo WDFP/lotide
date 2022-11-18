@@ -32,3 +32,5 @@ const result1 = countOnly(firstNames, {
   Fang: true,
   Agouhanna: false,
 });
+
+module.exports = countOnly;

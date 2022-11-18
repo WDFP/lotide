@@ -11,3 +11,5 @@ const bestTVShowsByGenre = {
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire",
 };
+
+module.exports = findKeyByValue;

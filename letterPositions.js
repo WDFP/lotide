@@ -31,3 +31,5 @@ console.log(letterPositions("lighthouse in the house"));
 //   e: [9, 16, 22],
 //   n: [12]
 // }
+
+module.exports = letterPositions;
